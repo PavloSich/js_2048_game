@@ -49,7 +49,7 @@ export default class Game {
   }
 
   moveRight() {
-    this.applyMove((row) => row.reverse());
+    this.applyMove((row) => [...row].reverse());
   }
 
   moveUp() {
@@ -60,7 +60,7 @@ export default class Game {
 
   moveDown() {
     this.transpose();
-    this.applyMove((row) => row.reverse());
+    this.applyMove((row) => [...row].reverse());
     this.transpose();
   }
 
